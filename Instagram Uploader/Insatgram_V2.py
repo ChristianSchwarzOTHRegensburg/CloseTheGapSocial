@@ -4,11 +4,14 @@ from selenium.webdriver.common.keys import Keys
 import random
 from InstagramAPI import InstagramAPI
 
-username = "sugerandspiceeverythingnice"
-password = "buch+promotion45"
+username = "[yourUserName]"
+password = "[yourPassword]"
 
+#change this to the path of your webdriver
 driver = webdriver.Chrome(executable_path = r"D:\Downloads\chromedriver_win32\chromedriver.exe")
+#if they change the login path, this must be adjusted
 driver.get("https://www.instagram.com/accounts/login/?source=auth_switcher")
+#wait a random amount of time so it doesn´t look to much like a bot
 sleep(random.uniform(0.5, 2.3))
 
 def login():
@@ -33,12 +36,12 @@ def login():
 
 login()
 
-#als eigenes skript ausgliedern
-#andere methode für follow/unfollow und kommentare verwenden
 def upload_photo():
     api = InstagramAPI(username, password)
     api.login()  
+    #for now we choose a specific picture, we will automate this later
     photo_path = 'D:/Pictures/Instagram/2.jpg'
+    #for now the caption ist hardcoded, we will generate captions directly from code
     caption = "Another photo"
     api.uploadPhoto(photo=photo_path, caption=caption)
     return
