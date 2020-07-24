@@ -35,12 +35,3 @@ login()
 driver.get("https://www.instagram.com/" + username + "/")
 sleep(random.uniform(0.5, 2.3))
 exit()
-
-   
-
-
-    
-           
-
-
-
