@@ -47,8 +47,3 @@ def upload_photo():
     return
 
 exit()
-
-   
-
-
-
