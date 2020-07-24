@@ -4,11 +4,14 @@ from selenium.webdriver.common.keys import Keys
 import random 
 #import sys
 
-username = "sugerandspiceeverythingnice"
-password = "buch+promotion45"
+username = "[yourUserName]"
+password = "[yourPassword]"
 
+#change this to the location of your webdriver
 driver = webdriver.Chrome(executable_path = r"D:\Downloads\chromedriver_win32\chromedriver.exe")
+#if they change the login path, this must be adjusted
 driver.get("https://www.instagram.com/accounts/login/?source=auth_switcher")
+#wait a random amount of time so it doesn´t look to much like a bot
 sleep(random.uniform(0.5, 2.3))
 
 def login():
